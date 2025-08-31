@@ -14,3 +14,15 @@ Role-based restrictions ensure that each role can only access what is intended f
 4. Run the script:  
    ```bash
    python RBAC_Demo.py
+
+## Test Credentials
+Use these credentials to log in and test role-based access:
+
+```text
+Admin account:
+  Username: admin
+  Password: admin123
+
+User account:
+  Username: user
+  Password: user123

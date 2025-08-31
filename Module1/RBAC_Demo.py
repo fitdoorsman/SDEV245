@@ -9,10 +9,10 @@ users = {
 
 # ---- 2) Protected actions/endpoints ----
 def view_admin_reports():
-    return "[ADMIN REPORTS] Quarterly financials and user management tools."
+    return "[ADMIN REPORTS] Quarterly Financials and User Management Tools."
 
 def view_user_profile():
-    return "[USER PROFILE] Your settings, preferences, and recent activity."
+    return "[USER PROFILE] Your Settings, Preferences, and Recent Activity"
 
 # Simple authorization check
 def authorize(required_role, current_role):

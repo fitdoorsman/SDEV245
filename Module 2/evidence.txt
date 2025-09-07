@@ -1,0 +1,31 @@
+
+==============================================================================
+INPUT
+==============================================================================
+
+Plaintext: Meet me at 10:30 by the library steps.
+
+==============================================================================
+SYMMETRIC (Fernet)
+==============================================================================
+
+Symmetric Key (Fernet, base64): Pkbf6lAuoPSLbYwTYiyjqr48nEboyn0BRjDREsvpaa8=
+Ciphertext (base64): gAAAAABovfGIweOjErfthyuS9hTvkdaZpu3kTgVVu0X5GkgOBpf8D3_2zme2u2fLXezh8xYRsrpTWp9o3ktRSsuuyFpcXTbFyLGRMG1O8WJTsdqqNyZPGChUDcqL2yDCkR4zYsrJ8a_Q
+Decrypted: Meet me at 10:30 by the library steps.
+
+==============================================================================
+ASYMMETRIC (RSA-OAEP)
+==============================================================================
+
+Public Key (PEM, first 120 chars): -----BEGIN PUBLIC KEY-----...
+Private Key (PEM, first 120 chars): -----BEGIN PRIVATE KEY-----...
+Ciphertext (RSA, base64): 0sdWRxNMmwygXqYuI+XSX9/2YQFN/ndzqFRrhv1Me640e3DPk9IzqAKQS/VmztOdAEDIM4UQo3SOW+Akp6aU/9S96isqrJVloVmfTHdjqX0BaV/K6h9QF4eL0GNtcemgBcSIcz+oA+NilRTF8jIUCqttPB+6eq5nhFVZW8biNCPwZH7pfoELduQWEn4o8hD3XJO3n88MtuebzSbCtKb2LUyD3XTHzty4z6C7wbbmo60e3eztVytuV2EytxxbHVvdKab+H3YAzCwBr1ByU/Aw9J3iDUSkWVRjh7d2wnmdzJoGVayD9PhnyaVsaRR4hxpX72zzlCeRzU9k8oUpcCPzjQ==
+Decrypted: Meet me at 10:30 by the library steps.
+
+==============================================================================
+NOTES
+==============================================================================
+
+• Symmetric: Fernet key is base64-encoded 32 bytes (AES + HMAC).
+• Asymmetric: RSA-2048 with OAEP(SHA-256). Encrypt w/ public, decrypt w/ private.
+Generated at: 2025-09-07T16:56:40

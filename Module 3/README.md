@@ -27,6 +27,7 @@ This project demonstrates secure hashing, encryption, and digital signatures as 
 - `crypto_app.py` → Main Python program  
 - `requirements.txt` → Python dependencies  
 - `README.md` → Documentation (this file)  
+- `demo_commands.txt` → Demo script with exact commands to run  
 
 ---
 

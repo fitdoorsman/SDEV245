@@ -1,0 +1,18 @@
+# Module 3: Secure Hashing and Encryption
+# Demo Script - Jason Hollin
+# Shows SHA-256 hashing, Caesar cipher, and Digital Signature
+
+# 1. Hash text with SHA-256
+python crypto_app.py hash --text "Hello Ivy Tech!"
+
+# 2. Hash a file (README.md)
+python crypto_app.py hash --file README.md
+
+# 3. Caesar cipher encryption
+python crypto_app.py caesar --text "Attack at Dawn!" --shift 5 --mode enc
+
+# 4. Caesar cipher decryption
+python crypto_app.py caesar --text "Fyyfhp fy Ifbs!" --shift 5 --mode dec
+
+# 5. Digital signature (sign and verify)
+python crypto_app.py sign --message "Assignment demo"

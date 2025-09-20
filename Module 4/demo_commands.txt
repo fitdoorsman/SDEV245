@@ -1,0 +1,28 @@
+# 1) Initialize admin (creates users.json)
+python secure_data_app.py init-admin --username admin --password "AdminPass123!"
+
+# 2) Admin adds a regular user
+python secure_data_app.py add-user --auth-user admin --auth-pass "AdminPass123!" --username jason --password "StrongPass123!" --role user
+
+# 3) Hash text (as user 'jason')
+python secure_data_app.py hash --auth-user jason --auth-pass "StrongPass123!" --text "Hello, Module 4!"
+
+# 4) Create a demo file (demo.txt)
+echo This is my Module 4 test file.> demo.txt
+echo It will be used for hashing and encryption.>> demo.txt
+echo Nothing sensitive, just sample text for the demo.>> demo.txt
+
+# 5) Hash a file (demo.txt)
+python secure_data_app.py hash --auth-user jason --auth-pass "StrongPass123!" --in demo.txt
+
+# 6) Encrypt text to JSON bundle (secret_text.json)
+python secure_data_app.py encrypt --auth-user jason --auth-pass "StrongPass123!" --text "Confidential Midterm Data" --passphrase "CorrectHorseBatteryStaple" --out secret_text.json
+
+#    (Optional) Encrypt the demo file to a bundle (secret_file.json)
+python secure_data_app.py encrypt --auth-user jason --auth-pass "StrongPass123!" --in demo.txt --passphrase "CorrectHorseBatteryStaple" --out secret_file.json
+
+# 7) Decrypt a bundle (shows original plaintext)
+python secure_data_app.py decrypt --auth-user jason --auth-pass "StrongPass123!" --in secret_text.json --passphrase "CorrectHorseBatteryStaple"
+
+# 8) Verify integrity (hash-before vs hash-after)
+python secure_data_app.py verify --auth-user jason --auth-pass "StrongPass123!" --in secret_text.json --passphrase "CorrectHorseBatteryStaple"

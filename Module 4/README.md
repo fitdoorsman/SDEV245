@@ -9,39 +9,15 @@
 ## Description
 This project demonstrates secure hashing, encryption, and integrity verification with a simple **user login and role-based access control** as required for Module 4 of SDEV245. It includes:
 
-1. **User Login & Roles**
-   - Users stored with PBKDF2-HMAC-SHA256 password hashes
-   - Roles: `admin`, `user` (admins can add users)
-
-2. **SHA-256 Hashing**
-   - Hash plain-text input
-   - Hash file contents
-
-3. **AES-GCM (Symmetric Encryption)**
-   - Encrypt text or files using PBKDF2-derived keys (with random salt + iterations)
-   - Decrypt securely to recover the original content
-
-4. **Integrity Verification**
-   - Compute SHA-256 hash before encryption
-   - Decrypt and recompute hash
-   - Compare to confirm integrity
+1. **User Login & Roles** – PBKDF2-HMAC-SHA256 password hashes; roles: `admin`, `user` (admins can add users)  
+2. **SHA-256 Hashing** – hash plain text and file contents  
+3. **AES-GCM (Symmetric Encryption)** – encrypt/decrypt text or files using PBKDF2-derived keys (with random salt + iterations)  
+4. **Integrity Verification** – compare SHA-256 before encryption vs after decryption  
 
 ---
 
-## Features
-- User authentication with role-based restrictions  
-- Passwords stored securely with salt and high iteration count  
-- SHA-256 hashing for messages and files  
-- AES-256-GCM encryption and decryption  
-- Integrity verification with hash-before / hash-after comparison  
-
----
-
-## Usage Examples
-### 1) Initialize admin user
-```bash
-python secure_data_app.py init-admin --username admin --password "AdminPass123!"
-
-### 1) Initialize admin user
-```bash
-python secure_data_app.py init-admin --username admin --password "AdminPass123!"
+## Requirements
+- Python **3.9+**  
+- One package to install:  
+  ```bash
+  pip install cryptography

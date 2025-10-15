@@ -1,4 +1,4 @@
-# SecretScanner
+# Secret Scanner
 
 A simple Python CLI tool that scans files or directories for **hardcoded secrets** such as API keys, passwords, tokens, and private keys.
 

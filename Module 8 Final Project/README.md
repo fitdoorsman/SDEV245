@@ -1,5 +1,9 @@
 # Secret Scanner
 
+**Author:** Jason Hollin  
+**Date:** October 2025  
+**Course:** SDEV245 
+
 A simple Python CLI tool that scans files or directories for **hardcoded secrets** such as API keys, passwords, tokens, and private keys.
 
 ---
